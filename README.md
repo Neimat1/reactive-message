@@ -12,4 +12,7 @@ This project is consisting of 2 microservices:
    _Which is a rest client microservice, that does:_
     * Consume all features that message microservice does.
 
-
+### Versions:
+* java-11
+* Apache Maven 3.9.3
+* Quarkus 3.2.12.FINAL
