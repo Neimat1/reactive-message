@@ -4,9 +4,9 @@ This project is consisting of 2 microservices:
 
 1. ### **service-one**:
     _Which is a message microservice, that does:_
-      * Prints list of messages
-      * Print one message
-      * Creat new message
+      * Prints welcome message - GET
+      * Print Success - POST
+      * Throw exception - POST
    
 2. ### **service-two**:
    _Which is a rest client microservice, that does:_
