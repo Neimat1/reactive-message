@@ -1,0 +1,20 @@
+### GET
+GET {{url}}/api/async/message
+Content-Type: application/json
+
+
+
+### POST CREATR NEW MESSAGE
+POST {{url}}/api/async/message/create-message
+Content-Type: text/plain
+
+"Go to Hell!"
+
+
+
+
+### POST THROW-EXCEPTION
+POST {{url}}/api/async/message/throw-exception
+Content-Type: application/json
+
+
