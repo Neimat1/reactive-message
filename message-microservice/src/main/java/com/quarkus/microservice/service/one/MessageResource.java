@@ -1,22 +1,43 @@
 package com.quarkus.microservice.service.one;
 
+import com.quarkus.microservice.service.one.service.MessageService;
 import io.smallrye.mutiny.Uni;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.inject.Inject;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-
-import java.time.Duration;
 
 @Path("/api/async/message")
 public class MessageResource {
 
+
+    private final MessageService messageService;
+
+    @Inject
+    public MessageResource(MessageService messageService) {
+        this.messageService = messageService;
+    }
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Uni<Response> hello() {
-        return Uni.createFrom()
-                .item(Response.ok().entity("That's Our Welcome message: A huge welcome").build())
-                .onItem().delayIt().by(Duration.ofSeconds(3));
+    public Uni<Response> getWelcomeMessage() {
+        return messageService.getWelcomeMessage();
     }
+
+    @POST
+    @Path("/create-message")
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)
+    public Uni<Response> createMessage(String message) {
+        return messageService.createMessage(message);
+    }
+
+    @POST
+    @Path("/throw-exception")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Uni<Response> throwExceptionMessage() {
+        return messageService.throwExceptionMessage();
+    }
+
+
 }
