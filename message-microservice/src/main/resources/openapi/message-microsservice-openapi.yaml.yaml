@@ -1,0 +1,51 @@
+---
+openapi: 3.0.3
+info:
+  title: Message Microservice
+  description: Service-One which has 3 endpoints
+  version: "1.0"
+tags:
+- name: Message Reactive Endpoints
+paths:
+  /api/async/message:
+    get:
+      tags:
+      - Message Reactive Endpoints
+      summary: Get Welcome Message
+      description: 'Return Static Welcome Message '
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+  /api/async/message/create-message:
+    post:
+      tags:
+      - Message Reactive Endpoints
+      summary: Create Message
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain: {}
+  /api/async/message/throw-exception:
+    post:
+      tags:
+      - Message Reactive Endpoints
+      summary: Throw Exception Message
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json: {}
+components:
+  securitySchemes:
+    SecurityScheme:
+      type: http
+      description: Authentication
+      scheme: basic
