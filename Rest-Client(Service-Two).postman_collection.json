@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "3061c61d-5719-480e-86d9-b9fbff60d2c1",
+		"name": "Rest-Client(Service-Two)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17452731"
+	},
+	"item": [
+		{
+			"name": "GetWelcomeMessage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/rest-client",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"rest-client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"Hola\"",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/rest-client/create-message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"rest-client",
+						"create-message"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "throw-exception",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/rest-client/throw-exception",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"rest-client",
+						"throw-exception"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
