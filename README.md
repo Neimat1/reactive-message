@@ -29,6 +29,16 @@ This project is consisting of 2 microservices:
 > * you can use postman collection / http requests in each repo
 > There's a Readme file for each service 
 
+> **_NOTE: Service-one_**
+> * now you can Swagger-Ui at <http://localhost:8080/q/swagger-ui/>.
+> * or generate Openapi by <http://localhost:8080/q/openapi/>.
+
+
+> **_NOTE: Service-two_**
+> * now you can Swagger-Ui at <http://localhost:8090/q/swagger-ui/>.
+> * or generate Openapi by <http://localhost:8090/q/openapi/>.
+
+
 ### Versions:
 * java-11
 * Apache Maven 3.9.3
