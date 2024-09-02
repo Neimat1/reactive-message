@@ -1,0 +1,20 @@
+### GET
+GET {{url}}/api/rest-client
+Content-Type: application/json
+
+
+
+### POST CREATR NEW MESSAGE
+POST {{url}}/api/rest-client/create-message
+Content-Type: text/plain
+
+"Go to Hell!"
+
+
+
+
+### POST THROW-EXCEPTION
+POST {{url}}/api/rest-client/throw-exception
+Content-Type: application/json
+
+
